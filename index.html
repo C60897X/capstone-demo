@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capstone Demo (Framework)</title>
+
+    <link rel="stylesheet" href="./styles/base.css">
+    <link rel="stylesheet" href="./styles/layout.css">
+    <link rel="stylesheet" href="./styles/components.css">
+  </head>
+
+  <body>
+    <main>
+      <!-- 1) Landing -->
+      <section class="section landing" id="landing">
+        <div class="container">
+          <p class="section-name">Demo Framework</p>
+          <h1 class="title">Landing → Scroll → Drag → End</h1>
+          <p class="subtitle">Scroll down to trigger a zoom-in (while scrolling). Then drag the square into the highlighted target.</p>
+          <div class="hint">↓ Scroll</div>
+        </div>
+      </section>
+
+      <!-- 2) Zoom while scrolling (scroll-track + sticky viewport) -->
+      <section class="section zoom" id="zoom">
+        <div class="scroll-track">
+          <div class="sticky-viewport">
+            <div class="container">
+              <p class="section-name">Scroll section</p>
+              <h2 class="title-sm">Zoom in while scrolling</h2>
+
+              <div class="stage">
+                <div class="zoom-target" id="zoomTarget">
+                  <div class="zoom-card">
+                    <div class="dot"></div>
+                    <p class="card-text">ZOOM TARGET</p>
+                  </div>
+                </div>
+              </div>
+
+              <p class="note">Keep scrolling. This is where GSAP ScrollTrigger will scrub the zoom.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3) Drag stage -->
+      <section class="section drag" id="drag">
+        <div class="container">
+          <p class="section-name">Interaction section</p>
+          <h2 class="title-sm">Drag the square into the highlight</h2>
+
+          <div class="drag-stage">
+            <div class="draggable" id="draggable" tabindex="0" aria-label="Draggable square">
+              <span>DRAG</span>
+            </div>
+
+            <div class="target-wrap">
+              <div class="target" id="target"></div>
+              <p class="target-label">TARGET</p>
+            </div>
+          </div>
+
+          <p class="note">For now this is layout only. Next step: add drag behavior + success state.</p>
+        </div>
+      </section>
+
+      <!-- 4) End -->
+      <section class="section end" id="end">
+        <div class="container">
+          <p class="section-name">End</p>
+          <h2 class="title-sm">Done</h2>
+          <p class="subtitle">This is the end section. Later you can replace it with narrative testing content.</p>
+          <a class="button" href="#landing">Back to top</a>
+        </div>
+      </section>
+    </main>
+
+    <script src="./scripts/main.js"></script>
+  </body>
+</html>

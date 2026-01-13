@@ -1,0 +1,74 @@
+/* layout.css */
+.section {
+    min-height: 100vh;
+    padding: 72px 20px;
+    border-top: 1px solid var(--line);
+    display: grid;
+    align-items: center;
+  }
+  
+  .container {
+    width: min(980px, 100%);
+    margin: 0 auto;
+  }
+  
+  .landing { border-top: none; }
+  
+  .title {
+    font-size: clamp(28px, 4vw, 44px);
+    margin: 10px 0 10px;
+    letter-spacing: -0.02em;
+  }
+  
+  .title-sm {
+    font-size: clamp(20px, 2.4vw, 28px);
+    margin: 10px 0 14px;
+    letter-spacing: -0.01em;
+  }
+  
+  .subtitle {
+    color: var(--muted);
+    max-width: 64ch;
+    margin: 0 0 18px;
+  }
+  
+  .section-name {
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-size: 12px;
+    margin: 0 0 8px;
+  }
+  
+  .note {
+    color: var(--muted);
+    margin: 14px 0 0;
+    font-size: 14px;
+    max-width: 70ch;
+  }
+  
+  /* Zoom section track */
+  .scroll-track {
+    height: 320vh; /* gives you scroll distance */
+  }
+  
+  .sticky-viewport {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    display: grid;
+    align-items: center;
+  }
+  
+  /* Stage boxes */
+  .stage {
+    margin-top: 18px;
+    border: 1px solid var(--line);
+    background: var(--panel);
+    border-radius: 18px;
+    height: min(60vh, 520px);
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+  }
+  
