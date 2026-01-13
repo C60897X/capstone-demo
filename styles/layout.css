@@ -59,6 +59,12 @@
     display: grid;
     align-items: center;
   }
+
+  .zoom-target {
+    transform-origin: center center;
+    will-change: transform;
+  }
+  
   
   /* Stage boxes */
   .stage {
