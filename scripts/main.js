@@ -69,8 +69,8 @@ console.log("Demo framework loaded.");
     });
   
     // Move diagonally: (x, y)
-    tl.to(left, { x: -50, y:-10, ease: "none" }, 0)
-      .to(right, { x: 50, y:-10, ease: "none" }, 0);
+    tl.to(left, { x: -100, y:-30, ease: "none" }, 0)
+      .to(right, { x: 100, y:-30, ease: "none" }, 0);
   }
   
   initScrollMove();  
