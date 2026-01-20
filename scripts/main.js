@@ -43,3 +43,34 @@ console.log("Demo framework loaded.");
   })();
   
   markers: true;
+
+
+
+
+  function initScrollMove() {
+    const section = document.querySelector("#scroll-move");
+    const left = document.querySelector("#moveLeft");
+    const right = document.querySelector("#moveRight");
+  
+    if (!section || !left || !right) return;
+  
+    // Optional: clear transforms when you refresh during dev
+    gsap.set([left, right], { clearProps: "transform" });
+  
+    // One timeline controls both items, synced to scrolling through this section
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: section,
+        start: "top center",
+        end: "bottom center",
+        scrub: true,
+        // markers: true,
+      },
+    });
+  
+    // Move diagonally: (x, y)
+    tl.to(left, { x: -220, ease: "none" }, 0)
+      .to(right, { x: 220, ease: "none" }, 0);
+  }
+  
+  initScrollMove();  

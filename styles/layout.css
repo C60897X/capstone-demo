@@ -78,3 +78,29 @@
     overflow: hidden;
   }
   
+  /* put in components.css (or layout.css) */
+.stage-move {
+  position: relative;
+  overflow: hidden;
+}
+
+/* circles */
+.scroll-item {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.25);
+  background: rgba(255,255,255,0.10);
+}
+
+/* start positions (near center-left / center-right) */
+.item-left {
+  left: 38%;
+  top: 35%;
+}
+
+.item-right {
+  left: 55%;
+  top: 35%;
+}

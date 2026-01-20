@@ -16,8 +16,8 @@
       <section class="section landing" id="landing">
         <div class="container">
           <p class="section-name">Demo Framework</p>
-          <h1 class="title">Current structure: Landing → Scroll → Drag → End</h1>
-          <p class="subtitle">First, scroll down to trigger a zoom-in (while scrolling). Then in the next section drag a square into the highlighted target.</p>
+          <h1 class="title">Current structure: Landing - Scroll to Zoom - Scroll to Move - Drag - End</h1>
+          <p class="subtitle">First, scroll down to trigger a zoom-in (while scrolling). Then, scroll to move objects. Finally, drag a square into the highlighted target.</p>
           <!-- <div class="hint">↓ Scroll</div> -->
         </div>
       </section>
@@ -27,7 +27,7 @@
         <div class="scroll-track">
           <div class="sticky-viewport">
             <div class="container">
-              <p class="section-name">Scroll section</p>
+              <p class="section-name">Scroll and Zoom section</p>
               <h2 class="title-sm">Scroll to zoom</h2>
 
               <div class="stage">
@@ -42,6 +42,17 @@
             </div>
           </div>
         </div>
+      </section>
+
+      <section class="section scroll-move" id="scroll-move">
+            <div class="container">
+              <p class="section-name">Scroll and Move section</p>
+              <h2 class="title-sm">Scroll to move</h2>
+              <div class="stage stage-move">
+                <div class="scroll-item item-left" id="moveLeft"></div>
+                <div class="scroll-item item-right" id="moveRight"></div>
+              </div>
+            </div>
       </section>
 
       <!-- 3) Drag stage -->
