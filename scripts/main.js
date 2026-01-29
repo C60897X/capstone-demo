@@ -74,3 +74,64 @@ console.log("Demo framework loaded.");
   }
   
   initScrollMove();  
+
+  function initZoom2Jump() {
+    const section = document.querySelector("#zoom2");
+    const cat = document.querySelector("#zoom2Cat");
+  
+    if (!section || !cat) {
+      console.warn("Zoom2 elements not found. Skipping initZoom2Jump.");
+      return;
+    }
+  
+    // -----------------------------
+    // EDIT VALUES HERE (tuning)
+    // -----------------------------
+    const CAT_START_SCALE = 0.75;  // cat looks "farther away"
+    const JUMP_SCALE_PEAK = 1.55;  // overshoot scale (bigger = punchier)
+    const JUMP_SCALE_FINAL = 1.45; // settle scale after overshoot
+    const JUMP_X = 0;             // px: +right / -left
+    const JUMP_Y = -30;           // px: -up / +down (small shift sells the jump)
+    const JUMP_TIME = 0.18;       // seconds: fast hit
+    const SETTLE_TIME = 0.12;     // seconds: quick settle
+    // -----------------------------
+  
+    // Set initial "far" pose (important so jump has contrast)
+    gsap.set(cat, {
+      scale: CAT_START_SCALE,
+      x: 0,
+      y: 0,
+    });
+  
+    let played = false;
+  
+    ScrollTrigger.create({
+      trigger: section,
+      start: "top center",     // EDIT: when the trigger should happen
+      // end not necessary for a one-shot trigger
+      // markers: true,        // uncomment to debug start position
+      onEnter: () => {
+        if (played) return;
+        played = true;
+  
+        // Time-based “jump” animation (NOT scrubbed)
+        const tl = gsap.timeline();
+  
+        tl.to(cat, {
+          scale: JUMP_SCALE_PEAK,
+          x: JUMP_X,
+          y: JUMP_Y,
+          duration: JUMP_TIME,
+          ease: "power3.out",
+        }).to(cat, {
+          scale: JUMP_SCALE_FINAL,
+          duration: SETTLE_TIME,
+          ease: "power2.out",
+        });
+      },
+    });
+  }
+  
+  // Call it once (alongside your other init functions)
+  initZoom2Jump();
+  
