@@ -113,16 +113,16 @@ function initZoom2Jump() {
   // -----------------------------
   // EDIT VALUES HERE (tuning)
   // -----------------------------
-  const CAT_START_SCALE = 0.55;   // EDIT: smaller = farther away (more dramatic jump)
-  const JUMP_SCALE_PEAK = 2.60;   // EDIT: big punchy jump (increase more if needed)
-  const JUMP_SCALE_FINAL = 2.30;  // EDIT: settle after overshoot
+const CAT_START_SCALE = 0.85;
+const JUMP_SCALE_PEAK = 1.85;
+const JUMP_SCALE_FINAL = 1.55;
 
-  const JUMP_X = 0;              // EDIT: +right / -left
-  const JUMP_Y = -60;            // EDIT: -up / +down (more movement = more noticeable)
+const JUMP_X = 0;
+const JUMP_Y = -35; 
 
-  const JUMP_TIME = 0.16;        // EDIT: faster hit
-  const SETTLE_TIME = 0.14;      // EDIT: settle
-  const TRIGGER_AT_PROGRESS = 0.35; // EDIT: 0~1 (how deep into the section before it triggers)
+const JUMP_TIME = 0.28;
+const SETTLE_TIME = 0.20;
+const TRIGGER_AT_PROGRESS = 0.35;
   // -----------------------------
 
   // Set initial “far” pose immediately (prevents weird starting state)
