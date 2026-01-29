@@ -1,3 +1,5 @@
+index.html
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -16,8 +18,8 @@
       <section class="section landing" id="landing">
         <div class="container">
           <p class="section-name">Demo Framework</p>
-          <h1 class="title">Current structure: Landing - Scroll to Zoom - Scroll to Move - Drag - End</h1>
-          <p class="subtitle">First, scroll down to trigger a zoom-in (while scrolling). Then, scroll to move objects. Finally, drag a square into the highlighted target.</p>
+          <h1 class="title">Current structure: Landing - Scroll to Zoom - Scroll to Move - Drag - Zoom 2 - End</h1>
+          <!-- <p class="subtitle">First, scroll down to trigger a zoom-in (while scrolling). Then, scroll to move objects. Finally, drag a square into the highlighted target.</p> -->
           <!-- <div class="hint">↓ Scroll</div> -->
         </div>
       </section>
@@ -76,6 +78,27 @@
         </div>
       </section>
 
+      <section class="section zoom2" id="zoom2">
+        <div class="scroll-track zoom2-track">
+          <div class="sticky-viewport zoom2-sticky">
+            <div class="zoom2-viewport">
+              <!-- Image stack (behind the mask) -->
+              <div class="zoom2-stack">
+                <img class="zoom2-img zoom2-bg" src="./assets/images/zoom2-background.png" alt="Background" draggable="false">
+                <img class="zoom2-img zoom2-cat" id="zoom2Cat" src="./assets/images/zoom2-cat1.png" alt="Cat" draggable="false">
+              </div>
+              <!-- Dark frame with a circular hole (on top of images) -->
+              <div class="zoom2-mask" aria-hidden="true"></div>
+              <!-- Optional tiny label (remove anytime) -->
+              <div class="zoom2-label">
+                <p class="section-name">Zoom 2 with Mask</p>
+                <p class="note">Scroll</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <!-- 4) End -->
       <section class="section end" id="end">
         <div class="container">
@@ -93,3 +116,4 @@
     <script src="./scripts/main.js"></script>
   </body>
 </html>
+
